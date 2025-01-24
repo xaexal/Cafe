@@ -33,7 +33,7 @@ public class Control {
 		Scanner s1 = new Scanner(System.in);
 		while(true) {
 			System.out.print("작업선택 [c:메뉴추가,u:메뉴수정,d:메뉴삭제,r:메뉴보기,x:종료] ");
-			String mch=s.nextLine();
+			String mch=s1.nextLine();
 			if(mch.equals("x")||mch.equals("X")) break;
 			switch(mch) {
 			case "c","C":
@@ -131,12 +131,15 @@ public class Control {
         return str.matches("-?\\d*(\\.\\d+)?");
 	}
 	
-	public static void clearAll(alName) {
+	public static void clearAll(ArrayList<String> alName) {
 		alName.clear();
 		
 		while(alName.size()>0) {
 			System.out.println(alName.get(0));
 			alName.remove(0);
 		}
+	}
+	public static void showOrder(ArrayList<String> _Menu, ArrayList<Integer> _Count,ArrayList<Integer> _Sum) {
+		
 	}
 }
