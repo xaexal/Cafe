@@ -139,7 +139,4 @@ public class Control {
 			alName.remove(0);
 		}
 	}
-	public static void showOrder(ArrayList<String> _Menu, ArrayList<Integer> _Count,ArrayList<Integer> _Sum) {
-		
-	}
 }
