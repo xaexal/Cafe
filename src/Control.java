@@ -18,10 +18,10 @@ public class Control {
 				doMenu(alName,alPrice); // 메소드호출, call
 				break;
 			case "o","O":
-				doOrder(alName, alPrice);
+//				doOrder(alName, alPrice);
 				break;
 			case "s","S":
-				doSales();
+//				doSales();
 				break;
 			}
 		}
@@ -78,52 +78,13 @@ public class Control {
 		while(true) {
 			// 메뉴번호 읽기
 			// 메뉴번호가 1보다 작으면 종료
-			// 새멤뉴명 읽기
+			// 새메뉴명 읽기
 			// 새 값 읽기
 		}
 	}
 	public static void deleteMenu(ArrayList<String> _Name,
 			  ArrayList<Integer> _Price) {
 		
-	}
-	public static void doOrder(ArrayList<String> aName,
-							   ArrayList<Integer> aPrice) {
-		ArrayList<String> alMenu = new ArrayList<String>();
-		ArrayList<Integer> alCount = new ArrayList<Integer>();
-		ArrayList<Integer> alSum = new ArrayList<Integer>();
-		
-		Scanner s = new Scanner(System.in);
-
-		for(int i=0; i<aName.size(); i++) {
-			System.out.println(aName.get(i)+", "+aPrice.get(i));
-		}
-		
-		while(true) {
-			System.out.print("작업선택 [c:주문추가,d:주문삭제,r:주문보기,x:주문종료] ");
-			String mch=s.nextLine();
-			if(mch.equals("x")||mch.equals("X")) break;
-			switch(mch) {
-			case "c","C":
-				addOrder(_Name,_Price,alMenu,alCount,alSum);
-				break;
-			case "d","D":
-				alMenu.clear(); alCount.clear(); alSum.clear();
-				break;
-			case "r","R":
-				showOrder(alMenu,alCount,alSum);
-			}
-		}
-	}
-	public static void doSales() {
-		Scanner s1 = new Scanner(System.in);
-		while(true) {
-			System.out.print("작업선택 [r:매출보기,x:보기종료] ");
-			String mch=s1.nextLine();
-			if(mch.equals("x")||mch.equals("X")) break;
-			else if(mch.equals("r")||mch.equals("R")) { 
-				System.out.println("매출보기");
-			}
-		}
 	}
 	
 	public static boolean isNumber(String str) {
